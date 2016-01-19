@@ -45,7 +45,7 @@
                 	<a href="#"><i class="fa fa-fw fa-gear"></i> Επεξεργασία Προφίλ</a>
                 </li>
                 <li>
-                	<a href="#"><i class="fa fa-fw fa-envelope"></i> Το πορτοφόλι μου</a>
+                	<a href=<?php print "?p=wa" ?>><i class="fa fa-fw fa-envelope"></i> Το πορτοφόλι μου</a>
                 </li>
                 <li class="divider"></li>
                 <li>
@@ -55,3 +55,4 @@
          </li>
      </ul>
 	<!-- ./nav navbar-right top-nav -->
+
