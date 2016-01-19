@@ -12,6 +12,11 @@
 
 
      <ul class="nav navbar-right top-nav">
+
+        <li>
+                <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button class="btn btn-xs btn-success" type="button">Έναρξη / Λήξη Συνεδρίας</button>
+        </li>
 	              
          <li class="dropdown">
          	<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>
@@ -44,9 +49,6 @@
             	<li>
                 	<a href="#"><i class="fa fa-fw fa-gear"></i> Επεξεργασία Προφίλ</a>
                 </li>
-                <li>
-                	<a href=<?php print "?p=wa" ?>><i class="fa fa-fw fa-envelope"></i> Το πορτοφόλι μου</a>
-                </li>
                 <li class="divider"></li>
                 <li>
                 	<a href="#"><i class="fa fa-fw fa-power-off"></i> Αποσύνδεση</a>
@@ -55,4 +57,3 @@
          </li>
      </ul>
 	<!-- ./nav navbar-right top-nav -->
-

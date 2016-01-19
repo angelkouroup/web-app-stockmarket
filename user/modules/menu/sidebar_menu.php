@@ -7,12 +7,21 @@
         	<li class="active">
             	<a href=<?php print "?p=home" ?>><i class="fa fa-fw fa-dashboard"></i> Αρχική</a>
             </li>
+            </li>
             <li>
             	<a href=<?php print "?p=po" ?>><i class="fa fa-fw fa-shopping-cart"></i> Εντολές Αγοράς</a>
             </li>
             <li>
             	<a href=<?php print "?p=so" ?>><i class="fa fa-fw fa-money"></i> Εντολές Πώλησης</a>
             </li>
+            
+            <li>
+                <a data-toggle="modal" data-target="#nea_entolh_agoras" href="javascript:void(0);"><i class="fa fa-fw fa-plus"></i> Νέα Εντολή Αγοράς</a>
+            </li>
+            <li>
+                <a data-toggle="modal" data-target="#nea_entolh_polhshs" href="javascript:void(0);"><i class="fa fa-fw fa-minus"></i> Νέα Εντολή Πώλησης</a>
+            </li>
+              
            
 		</ul>
 	</div>

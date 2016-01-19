@@ -50,11 +50,9 @@
                 switch ($p) 
                 {
                     case 'home': require "modules/pages/main.php"; break;
-                    case 'po': require "modules/pages/purchase_orders.php"; break;
-                    case 'so': require "modules/pages/sell_orders.php"; break;
-                    case 'wa': require "modules/pages/wallet.php"; break;
+                    case 'met': require "modules/pages/metoxes.php"; break;
+                    case 'xrhstes': require "modules/pages/xrhstes.php"; break;
                     default : require "modules/pages/main.php";
-
                     //default : require "pages/error.php";
                 }
     
