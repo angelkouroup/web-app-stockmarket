@@ -1,7 +1,9 @@
+
+
 <!-- Brand and Login get grouped for better mobile display -->
 
 	<div class="navbar-header">
-		<a class="navbar-brand" href=<?php print "?p=#" ?>>Web app Stockmarket</a>
+		<a class="navbar-brand" href=<?php print "?p=#" ?>><img src="../smlogo.png"/> </a>
 	          
 		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse" >
 			<span class="sr-only">Toggle navigation</span>
@@ -16,22 +18,29 @@
 		<ul class="nav navbar-right top-nav-login">  
     		
             <!-- Login form -->
-    		<form class="form-inline">
-  				<div class="form-group">
+    		<form  class="form-inline" action="check.php" method='post'>
+            			<div class="form-group">
     				<label class="sr-only" for="exampleInputEmail3">Email address</label>
-    				<input type="email" class="form-control" id="exampleInputEmail3" placeholder="Όνομα Χρήστη">
+    				<input type="text" name="username" class="form-control" id="exampleInputEmail3" placeholder="Όνομα Χρήστη">
   				</div>
             	<div class="form-group">
             		<label class="sr-only" for="exampleInputPassword3">Password</label>
-            		<input type="password" class="form-control" id="exampleInputPassword3" placeholder="Κωδικός">
+            		<input type="password" name="password" class="form-control" id="exampleInputPassword3" placeholder="Κωδικός">
             	</div>
             	<div class="checkbox">
             		<label>
             			<input type="checkbox"> Να με θυμάσαι
             		</label>
             	</div>
-              	<button type="submit" class="btn btn-default">Σύνδεση</button>
-        	</form>
+              	<button type="submit"name='submit' value='submit' class="btn btn-default">Σύνδεση</button>
+        	    <?php
+if (isset($_GET["msg2"]) && $_GET["msg2"] == 'failed') {
+echo "Wrong Username / Password";
+}
+?>
+
+            </form>
+    
     	</ul>
 
 	</div>               
