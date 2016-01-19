@@ -7,12 +7,38 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
          </button>
-         <a class="navbar-brand" href=<?php print "?p=main" ?>>Web app Stockmarket</a>
+         <a class="navbar-brand" href=<?php print "?p=main" ?>><img src="../smlogo.png"/></a>
      </div>
 
 
      <ul class="nav navbar-right top-nav">
-	              
+	 
+     <!-- search <ul class="nav top-menu">           
+		<ul>-->         
+        	<li class="dropdown-toggle">
+				<form class="navbar-form">
+                <label> 
+					<input placeholder="<?php echo 'Αναζήτηση Μετοχής'; ?>" type="text" name="s">
+				</label>
+                </form>
+			</li>                    
+		
+		
+		<script type="text/javascript" src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../../modules/search/typeahead.min.js"></script>
+        <!--<script type="text/javascript" src="js/typeahead.min.js"></script>-->
+		<script type="text/javascript">
+		<!--search-->
+		$('input[name=s]').typeahead({
+			name: 'typeahead',
+			remote:'search/search.php?s=%QUERY',
+			limit : 15
+		});
+		
+        </script>
+     	<!-- end search -->
+                  
          <li class="dropdown">
          	<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>
             <ul class="dropdown-menu alert-dropdown">
@@ -39,20 +65,22 @@
          
          
          <li class="dropdown">
-         	<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Username <b class="caret"></b></a>
+         	<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> 
+			<?php // Set session variables
+			echo $_SESSION["username1"];
+			?> <b class="caret"></b></a>
             <ul class="dropdown-menu">
             	<li>
-                	<a href="#"><i class="fa fa-fw fa-gear"></i> Επεξεργασία Προφίλ</a>
+                	<a href="<?php print "?p=cf" ?>"><i class="fa fa-fw fa-envelope"></i> Επεξεργασία Προφίλ</a>
                 </li>
                 <li>
-                	<a href=<?php print "?p=wa" ?>><i class="fa fa-fw fa-envelope"></i> Το πορτοφόλι μου</a>
+                	<a href="<?php print "?p=wa" ?>"><i class="fa fa-fw fa-credit-card"></i> Το πορτοφόλι μου</a>
                 </li>
                 <li class="divider"></li>
                 <li>
-                	<a href="#"><i class="fa fa-fw fa-power-off"></i> Αποσύνδεση</a>
+                	<a href="logout.php"><i class="fa fa-fw fa-power-off"></i> Αποσύνδεση</a>
                 </li>
             </ul>
          </li>
      </ul>
 	<!-- ./nav navbar-right top-nav -->
-
