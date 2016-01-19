@@ -1,5 +1,22 @@
+<?php
+session_start();
+// Set session variables
+$_SESSION["username1"];
+$_SESSION["user_id"];
+$_SESSION["u_type"];
+
+if (($_SESSION["user_id"]=='') || (($_SESSION["u_type"]!='1') && ($_SESSION["u_type"]!='2')))
+{
+	header("Location: error.php"); 
+}
+require '../system/dbcon.php';
+
+
+
+?>
 <!DOCTYPE html>
 <html>
+
 
 <head>
 
@@ -9,7 +26,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>User Pages - Stockmarket</title>
+    <title>Admin Pages - Stockmarket</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">

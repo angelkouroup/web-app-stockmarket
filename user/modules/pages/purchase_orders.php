@@ -1,3 +1,24 @@
+<?php $_SESSION["user_id"]; ?> 
+<script src="../../../api-library/js/stocks.js"></script>
+<script>
+window.setInterval('refresh()',1000);
+
+function refresh()
+{
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() 
+	{
+    	if (xhttp.readyState == 4 && xhttp.status == 200) 
+		{
+			loadpurchases(xhttp.responseText);
+   		}
+  	};
+  	xhttp.open("POST", "../../../api-library/show_purchase_orders.php", true);
+  	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xhttp.send('user_id=<?php echo $_SESSION['user_id']; ?>');
+} 
+</script>
+
 <!-- Page Heading -->
 	<div class="row">
     	<div class="col-lg-12">
@@ -11,8 +32,8 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="table-responsive">
-                <table class="table table-bordered table-hover table-striped">
-                    <thead>
+                <table id='purchasestable' class="table table-bordered table-hover table-striped">
+                    <!--<thead>
                         <tr>
                             <th>Όνομα</th>
                             <th>Τιμή</th>
@@ -39,7 +60,7 @@
                             <td>19</td>
                             <td>12/03/2016</td>
                         </tr>
-                    </tbody>
+                    </tbody>-->
                 </table>
             </div>
         </div>

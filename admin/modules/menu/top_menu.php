@@ -7,7 +7,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
          </button>
-         <a class="navbar-brand" href=<?php print "?p=main" ?>>Web app Stockmarket</a>
+         <a class="navbar-brand" href=<?php print "?p=main" ?>><img src="../smlogo.png"/></a>
      </div>
 
 
@@ -44,14 +44,16 @@
          
          
          <li class="dropdown">
-         	<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Username <b class="caret"></b></a>
+         	<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <?php // Set session variables
+			echo $_SESSION["username1"];
+			?> <b class="caret"></b></a>
             <ul class="dropdown-menu">
             	<li>
                 	<a href="#"><i class="fa fa-fw fa-gear"></i> Επεξεργασία Προφίλ</a>
                 </li>
                 <li class="divider"></li>
                 <li>
-                	<a href="#"><i class="fa fa-fw fa-power-off"></i> Αποσύνδεση</a>
+                	<a href="logout.php"><i class="fa fa-fw fa-power-off"></i> Αποσύνδεση</a>
                 </li>
             </ul>
          </li>
