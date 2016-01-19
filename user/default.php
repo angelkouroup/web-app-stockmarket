@@ -13,7 +13,6 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../bootstrap/css/bootstrap-datepicker.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="../bootstrap/css/custom.css" rel="stylesheet">
@@ -31,7 +30,7 @@
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         	
             <!-- Brand and Top Menu Items (toggle) get grouped for better mobile display -->
-            <?php require "modules/menu/top_menu.php"; ?>
+            <?php require "/modules/menu/top_menu.php"; ?>
             
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <?php require "modules/menu/sidebar_menu.php"; ?>
@@ -52,9 +51,7 @@
                     case 'home': require "modules/pages/main.php"; break;
                     case 'po': require "modules/pages/purchase_orders.php"; break;
                     case 'so': require "modules/pages/sell_orders.php"; break;
-                    case 'wa': require "modules/pages/wallet.php"; break;
                     default : require "modules/pages/main.php";
-
                     //default : require "pages/error.php";
                 }
     
@@ -65,10 +62,8 @@
 
         </div>
         <!-- /#page-wrapper -->
-        <?php require "modules/menu/modals.php"; ?>
+
     </div>
-
-
     <!-- /#wrapper -->
 
     <!-- jQuery -->
@@ -76,21 +71,6 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="../bootstrap/js/bootstrap.min.js"></script>
-    <script src="../bootstrap/js/bootstrap-datepicker.min.js"></script>
-    
-
-    <script type="text/javascript">
-    $(document).ready(function() {
-        $('.datepicker').datepicker({
-            dateFormat: "dd-mm-yyyy",
-            changeMonth: true,
-            changeYear: true,
-            beforeShow: function() { 
-                $('#ui-datepicker-div').addClass('datepicker');
-              }
-        });
-    });
-    </script>
     
 </body>
 
